@@ -1,0 +1,39 @@
+<?xml version="1.0" ?>
+<PianoFromAbove>
+    <Visual KeysShown="1" AlwaysShowControls="0" AssociateFiles="0" FirstKey="21" LastKey="108">
+        <Colors>
+            <Color R="2" G="2" B="48" />
+            <Color R="23" G="2" B="67" />
+            <Color R="43" G="2" B="86" />
+            <Color R="80" G="2" B="101" />
+            <Color R="118" G="2" B="117" />
+            <Color R="153" G="2" B="104" />
+            <Color R="188" G="3" B="90" />
+            <Color R="214" G="26" B="66" />
+            <Color R="241" G="50" B="43" />
+            <Color R="246" G="111" B="66" />
+            <Color R="252" G="173" B="89" />
+            <Color R="248" G="208" B="131" />
+            <Color R="245" G="243" B="173" />
+            <Color R="250" G="249" B="214" />
+            <Color R="255" G="255" B="255" />
+            <Color R="255" G="255" B="255" />
+        </Colors>
+        <BkgColor R="1" G="1" B="24" />
+    </Visual>
+    <Audio MIDIOutDevice="OmniMIDI" />
+    <Video Renderer="0" ShowFPS="0" LimitFPS="1" />
+    <Controls FwdBackSecs="3" SpeedUpPct="10">
+        <KeyboardMap />
+    </Controls>
+    <Library AlwaysAdd="0" SortCol="1">
+        <Sources>
+            <Source Name="C:\Users\doge1311\Desktop" Type="1" />
+            <Source Name="C:\Users\doge1311\Documents" Type="1" />
+            <Source Name="C:\Users\doge1311\Music" Type="1" />
+            <Source Name="C:\Users\doge1311\Music\Piano From Above" Type="2" />
+        </Sources>
+    </Library>
+    <Playback LearnMode="1" Mute="0" Volume="1" NoteSpeed="0.21" Metronome="0" />
+    <View Library="1" Controls="1" Keyboard="1" NoteLabels="0" OnTop="0" OffsetX="0" OffsetY="0" ZoomX="1" MainLeft="-8" MainTop="-8" MainWidth="960" MainHeight="589" LibWidth="176" />
+</PianoFromAbove>
