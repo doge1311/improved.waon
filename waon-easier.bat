@@ -17,15 +17,17 @@ set /p "s=Shift: "
 set /p "nfft=NFFT (if you don't know what this is then just type 2048): "
 set /p "peak=Peak (if you want chunks then type -127 and make sure shift isn't below 768, and if you don't, just type 127 and there isn't a shift limit on this one): "
 set /p "www=Window (0-no window 1-parzen window 2-welch window 3-hanning window (recommended) 4-hamming window 5-blackman window 6-steeper 30-dB/octave rollof window) so choose a window: "
-set /p "trak=uhh tracks (16 or 32 recommended): "
+set /p "trak=velocity display resolution (16 or 32 recommended): "
+set /p "realfile=Keep original file?(the colored file will not play at the correct speed in some midi players) 1=yes 0=no: "
 
-echo "duplicate input with no spaces as said converter will not work if the input name has spaces in it."
-copy /y "%file%" "C:\Users\%USERNAME%\audio.wav"
+echo duplicate input and rename to something with no spaces so the actual converter doesnt break
 
-set "output=%filename%_t-%t%_b-%b%_s-%s%_p-%peak%_window-%www%_c_-7.mid"
+copy /y %file% "C:\Users\%USERNAME%\audio.wav"
+
+set "output=%filename%_t-%t%_b-%b%_s-%s%_p-%peak%_window-%www%_c_-6.75.mid"
 
 echo "main command(waon)"
-start "" /B "C:\Users\%USERNAME%\Downloads\waon0-9\waon.exe" -t %t% -b %b% -s %s% -c -6.414 -k %peak% -w %www% -i "C:\Users\%USERNAME%\audio.wav" -o "%output%"
+start "" /B "C:\Users\%USERNAME%\Downloads\waon0-9\waon.exe" -t %t% -b %b% -s %s% -c -6.75 -k %peak% -w %www% -i "C:\Users\%USERNAME%\audio.wav" -o "%output%"
 
 :WAON_WAIT
 timeout /t 1 /nobreak >nul
@@ -49,5 +51,5 @@ if errorlevel 1 (
 )
 
 echo "deleting temporary files"
-del "%output%"
+if %realfile%=="0" del "%output%"
 del "C:\Users\%USERNAME%\audio.wav"
